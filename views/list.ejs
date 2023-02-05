@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>To Do List</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <h1 class="heading"> <%= ListTitle %> </h1>
+
+                    <div class="listbox">
+                        <% newlistItems.forEach((Item) => { %>
+                        <form action="/delete" method="post">
+                                <div class="list">
+                                    <input type="checkbox" name="checkbox" value="<%= Item._id %>" onchange="this.form.submit()"/>
+                                    <p> <%= Item.name %> </p>
+                                    </div>
+                                    <input type="hidden" name="listname" value="<%= ListTitle %>"></input>
+                            </form>
+                                <% }) %>
+                                </div>
+
+                                <form class="form" action="/" method="post"
+                                    autocomplete="off">
+                                    <input class="inputItem" type="text"
+                                        name="newItem" placeholder="Add NewItem">
+                                    <button title="Add Item" class="btn margin"
+                                        type="submit" name="list" value="<%= ListTitle %>">+</button>
+                                </form>
+                            </div>
+                            <footer>
+                                <p>Copyright &COPY;2023 The Code CareerCamp</p>
+                            </footer>
+                        </div>
+
+                        <script src="/script/index.js"></script>
+                    </body>
+                </html>

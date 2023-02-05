@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root{
+    --purple-c:#d637d6;
+}
+
+.list,
+.heading,
+.inputItem {
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+    border-radius: 2px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(22deg, var(--purple-c) 50%, #b7cde5 50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 40%;
+    height: max-content;
+    padding: 24px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.heading {
+    max-height: 70px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: var(--purple-c);
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    text-transform: capitalize;
+}
+
+.list, .form{
+    background: white;
+}
+
+.listbox{
+    display: block;
+    height: 270px;
+    margin: 12px auto;
+    overflow-y: hidden;
+}
+
+.listbox.active{
+    overflow-y: scroll;
+}
+
+.list {
+    width: 100%;
+    font-weight: 500;
+    font-size: 2rem;
+
+    border-bottom: 2px solid #d6cfcf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list p{
+    width: 95%;
+    text-align: left;
+}
+
+input:checked ~ p{
+text-decoration: line-through;
+text-decoration-color: #f14193;
+}
+
+::placeholder{
+    color: #f14193;
+    opacity: 0.7;
+}
+
+.inputItem {
+    margin: 12px auto;
+    max-height: 70px;
+    width: 50%;
+    font-size: 2rem;
+    border: none;
+    font-weight: 500;
+    outline: none;
+    text-align: center;
+    border-bottom: 3px solid #f14193;
+    border-radius: 50%;
+}
+
+.inputItem:focus{
+    border-bottom: 3px solid #427dea;
+}
+
+.btn{
+    background-color: var(--purple-c);
+    color: white;
+    border-radius: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    line-height: 0;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.margin{
+    margin-left: 24px;
+}
+
+footer{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+footer p{
+    font-size: 2rem;
+    color: white;
+}
